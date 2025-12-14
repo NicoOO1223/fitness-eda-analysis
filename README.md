@@ -35,6 +35,12 @@ Identifying which sensor inputs matter most.
 
 ![Correlation Matrix](assets/correlation_matrix.png)
 
+### 3. Data Distributions
+Understanding the population demographics and calorie spread.
+* **Insight:** These plots visualize the BMI spread of the user base and the distribution of calorie burn per session, highlighting the range of intensity levels the model needs to learn.
+
+![Distributions](assets/distributions.png)
+
 ---
 
 ## 🤖 Model Performance
@@ -45,8 +51,8 @@ I utilized **XGBoost** for its ability to handle non-linear relationships betwee
 * **R² Score:** `0.99` (High explainability)
 * **Architecture:** Gradient Boosted Trees with a learning rate of 0.05.
 
-### Actual vs. Predicted
-The scatter plot below shows an almost perfect alignment along the 45-degree line, indicating that the model generalizes extremely well across different intensity levels.
+### Actual vs. Predicted & Residual Analysis
+The plots below show an almost perfect alignment along the 45-degree line (Actual vs Predicted), indicating that the model generalizes extremely well. The Residual Plot (left) confirms errors are randomly distributed (homoscedasticity), validating the model reliability.
 
 ![Model Performance](assets/model_performance.png)
 
@@ -60,7 +66,7 @@ The scatter plot below shows an almost perfect alignment along the 45-degree lin
 
 ### 2. Diagnostics
 * **VIF (Variance Inflation Factor):** Checked for multicollinearity among physiological features.
-* **Residual Analysis:** Confirmed that errors are randomly distributed (homoscedasticity), validating the model's reliability.
+* **Residual Analysis:** Confirmed that errors are randomly distributed, validating the model's reliability.
 
 ---
 
@@ -70,10 +76,10 @@ The scatter plot below shows an almost perfect alignment along the 45-degree lin
 Clone the repo and install dependencies:
 
 - Clone the repository:  
-  `git clone https://github.com/NicoOO1223/fitness-tracker-eda.git`
+  `git clone https://github.com/NicoOO1223/fitness-eda.git`
 
 - Navigate into the project directory:  
-  `cd fitness-tracker-eda`
+  `cd fitness-eda`
 
 - Install Python dependencies:  
   `pip install -r requirements.txt`
