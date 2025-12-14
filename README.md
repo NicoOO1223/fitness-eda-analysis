@@ -80,6 +80,6 @@ Clone the repo and install dependencies:
 
   ### 2. Run the Analysis
   
-  `python analysis.py
+  `python analysis.py`
 
   This script will load the data, perform EDA, train the XGBoost model, and save all visualization charts to the assets/ folder.
