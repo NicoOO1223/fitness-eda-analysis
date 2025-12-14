@@ -13,10 +13,8 @@ if not os.path.exists('assets'):
     os.makedirs('assets')
 
 # Load Data
-try:
-    df = pd.read_csv('data/train.csv')
-except FileNotFoundError:
-    df = pd.read_csv('train.csv')
+df = pd.read_csv('data/data.csv')
+
 
 # ---- Data Preparation ----
 print("--- ⚙️ Preparing Data ---")
@@ -113,5 +111,6 @@ ax[1].set_ylabel("Predicted")
 plt.tight_layout()
 plt.savefig('assets/model_performance.png')
 plt.close()
+
 
 print("\n🎉 Done! Charts saved to 'assets/' folder.")
